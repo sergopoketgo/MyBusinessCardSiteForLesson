@@ -1,0 +1,350 @@
+body {
+    color: #fff;
+    font-family: "SofiaSansExtraCondensed", sans-serif;
+    font-size: 2.5em;
+    background-color: #000;
+}
+
+/*Header Section*/
+.section-header {
+    justify-content: center;
+    background: linear-gradient(180deg, #00000000 75%, #00000005 80%, #000 95%, #000 100%), url("../img/webp/section-header-bg.webp") 0 0 / cover no-repeat;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.section-header__title {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    letter-spacing: 0.025em;
+}
+
+.section-header__bio {
+    font-size: 1.1em;
+    width: 750px;
+}
+
+.section-header__bio-info {
+    font-size: 1.2em;
+}
+
+.section-header__btn-down {
+    font-size: 4.75em;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.section-header__btn-down:hover {
+    transform: scale(1.1);
+}
+
+/*Skills Section*/
+.section-skills {
+    padding-bottom: 100px;
+}
+
+.section-skills__row {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.section-skills__row_bottom {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 0 25px 25px 25px;
+}
+
+.section-skills__row-image {
+    width: 200px;
+    margin-inline: 35px;
+}
+
+/*Projects Section*/
+.section-projects {
+    padding-bottom: 100px;
+}
+
+.section-projects__title {
+    margin-bottom: 50px;
+}
+
+.section-projects__account {
+    position: relative;
+    text-align: center;
+    line-height: 0.9em;
+    letter-spacing: 0.1em;
+}
+
+.section-projects__account-logo-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 10px;
+    border-radius: 100%;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.section-projects__account-logo-container:hover {
+    transform: scale(1.1);
+    margin-bottom: 23px;
+}
+
+.section-projects__account-logo-container:hover .section-projects__account-logo_github {
+    opacity: 0;
+}
+
+.section-projects__account-logo-container:hover ~ .section-projects__account-name,
+.section-projects__account-logo-container:hover ~ .section-projects__account-bio,
+.section-projects__account-logo-container:hover ~ .section-projects__account-username{
+    color: #373737;
+    font-size: 1.1em;
+}
+
+.section-projects__account-logo-container:hover ~ .section-projects__project,
+.section-projects__account-logo-container:hover ~ .section-projects__project::after {
+    border-color: #373737;
+}
+
+.section-projects__account-logo-container:hover ~ .section-projects__project > .section-projects__project-link {
+    color: #373737;
+    font-size: 1.1em;
+    letter-spacing: 0.02em;
+}
+
+.section-projects__account-logo-container:hover ~ .section-projects__project > .section-projects__project-logo {
+    filter: brightness(0.3);
+}
+
+.section-projects__account-logo-container:hover ~ .section-projects__project_lesson {
+    transform: translateX(-25px);
+}
+
+.section-projects__account-logo-container:hover ~ .section-projects__project_minecraft {
+    transform: translateX(25px);
+}
+
+.section-projects__account-logo-container:hover ~ .section-projects__account-name {
+    transform: translateX(-30px);
+}
+
+.section-projects__account-logo-container:hover ~ .section-projects__account-bio {
+    transform: translateX(15px);
+}
+
+.section-projects__account-logo-container:hover ~ .section-projects__account-name::after,
+.section-projects__account-logo-container:hover ~ .section-projects__account-bio::after {
+    border-bottom: 10px solid #373737;
+}
+
+.section-projects__account-logo_github {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 100%;
+    transition: .2s;
+}
+
+.section-projects__account-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.section-projects__account-name {
+    position: absolute;
+    top: 0;
+    left: -155px;
+    padding: 5px 15px 5px 15px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.section-projects__account-name::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 93%;
+    height: 100%;
+    border-bottom: 5px solid #fff;
+    border-bottom-left-radius: 10px;
+    transition: .4s all, .2s border-bottom;
+}
+
+.section-projects__account-name:hover {
+    border-radius: 10px;
+    background-color: rgba(55, 55, 55, 0.95);
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.section-projects__account-name:hover::after {
+    border-bottom-left-radius: 5px;
+    transform: translateX(40%) scaleX(0);
+}
+
+.section-projects__account-bio {
+    position: absolute;
+    top: 10px;
+    left: 225px;
+    width: 190px;
+    padding: 5px 15px 5px 15px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.section-projects__account-bio::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 96%;
+    height: 100%;
+    border-bottom: 5px solid #fff;
+    border-bottom-right-radius: 10px;
+    transition: .4s all, .2s border-bottom;
+}
+
+.section-projects__account-bio:hover {
+    border-radius: 10px;
+    background-color: rgba(55, 55, 55, 0.95);
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.section-projects__account-bio:hover::after {
+    border-bottom-right-radius: 5px;
+    transform: translateX(-40%) scaleX(0);
+}
+
+.section-projects__account-username {
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+    transition: .2s;
+}
+
+.section-projects__project {
+    position: absolute;
+    border: 5px solid #fff;
+    padding: 10px 25px;
+    letter-spacing: 0.05em;
+    text-decoration: underline #000;
+    transition: all .2s, text-decoration .4s, border-color .2s;
+    transition-delay: 0.1s;
+    cursor: pointer;
+}
+
+.section-projects__project_lesson {
+    top: 110px;
+    left: -585px;
+    border-radius: 25px 100px 0 100px;
+}
+
+.section-projects__project_minecraft {
+    top: 160px;
+    left: 250px;
+    border-radius: 100px 25px 100px 0;
+}
+
+.section-projects__project:hover {
+    border-radius: 100px;
+    background-color: #373737;
+    margin: 0 15px;
+    padding: 10px 10px;
+    font-size: 1.025em;
+    text-decoration: underline;
+}
+
+.section-projects__project_lesson::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    padding-inline: 0 325px;
+    border-bottom: 5px solid #fff;
+    transition: all .4s ease-in-out, .2s border-color;
+}
+
+.section-projects__project_lesson:hover::after {
+    transform: translateX(-30%);
+}
+
+.section-projects__project_minecraft::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 50%;
+    padding-inline: 0 345px;
+    border-bottom: 5px solid #fff;
+    transition: all .4s ease-in-out, .2s border-color;
+}
+
+.section-projects__project_minecraft:hover::after {
+    transform: translateX(35%);
+}
+
+.section-projects__project-logo {
+    width: 32px;
+    transition: .2s;
+}
+
+.section-projects__project-logo_lesson {
+    margin-right: 10px;
+}
+
+.section-projects__project-link_minecraft {
+    margin-right: 10px;
+}
+
+.section-projects__project-link {
+    color: #fff;
+    font-weight: 300;
+    transition: .2s;
+}
+
+/*Contacts Section*/
+.section-contacts {
+    padding-bottom: 100px;
+}
+
+.section-contacts__title {
+    margin-bottom: 25px;
+}
+
+.section-contacts__row {
+    background-color: white;
+}
+
+.section-contacts__row-item {
+    margin-inline: 20px;
+    transition: .4s;
+}
+
+.section-contacts__row-item:hover {
+    filter: brightness(1.1);
+    transform: scale(1.1);
+}
+
+.section-contacts__row-item-image {
+    width: 175px;
+    height: 175px;
+}
+
+.footer {
+    background-color: #232323;
+    border-radius: 20px 20px 0 0;
+}
+
+
+.footer__text {
+    padding-block: 20px;
+}
